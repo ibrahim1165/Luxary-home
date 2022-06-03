@@ -1,7 +1,18 @@
+import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useLocation } from 'react-router-dom';
+import auth from '../../firebase.init';
 import cover from "../../Group 33069.png"
+import Loading from './Loading';
 const Nabver = () => {
+  const [user]= useAuthState(auth)
+  const singout =()=>{
+    signOut(auth)
+    if(!user){
+      return <Loading></Loading>
+    }
+}
     
     return (
         <div className="navbar text-black font-bold mx-auto">
@@ -17,7 +28,7 @@ const Nabver = () => {
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/admin">Admin</Link></li>
               <li><Link to="/contact">Contact</Link></li>
-              <li>{
+              <li>{user ? <button onClick={singout}>LogOut</button> :
               <Link to="/login">Login</Link> 
                 }</li>
              
@@ -34,9 +45,9 @@ const Nabver = () => {
               <li><Link to="/about">About Us </Link></li>
               <li><Link to="/admin">Admin</Link></li>
               <li><Link to="/contact">Contact</Link></li>
-              <li>
-              <Link className="text-end" to="/login">Login</Link> 
-                </li>
+              <li>{user ? <button onClick={singout} className="font-bold">LogOut</button> :
+              <Link to="/login">Login</Link> 
+                }</li>
           </ul> 
         </div>
         {/* <div className="navbar-end">

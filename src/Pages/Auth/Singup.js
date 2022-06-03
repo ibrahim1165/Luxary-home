@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../Shared/Loading';
 
 const Singup = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -21,7 +22,7 @@ const Singup = () => {
     let signInError;
 
     if (loading || gLoading || updating) {
-        return ;
+        return <Loading></Loading>
     }
 
     if (error || gUser || updateError) {
@@ -37,7 +38,7 @@ const Singup = () => {
         navigate('/');
     }
     return (
-        <div className='flex justify-center items-center mt-6 my-12'>
+        <div className='flex justify-center items-center mt-6 my-12 text-accent font-bold'>
         <div className="card w-96 bg-base-100 shadow-xl">
             <div className="card-body">
                 <h2 className="text-center text-2xl font-bold">Sign Up</h2>
@@ -113,7 +114,7 @@ const Singup = () => {
                     </div>
 
                     {signInError}
-                    <input className='btn w-full max-w-xs text-white' type="submit" value="Sign Up" />
+                    <input className='btn w-full max-w-xs btn-accent' type="submit" value="Sign Up" />
                 </form>
                 <p><small>Already have an account? <Link className='text-primary' to="/login">Please login</Link></small></p>
                 <div className="divider">OR</div>

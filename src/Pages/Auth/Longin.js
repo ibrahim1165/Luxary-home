@@ -3,6 +3,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import auth from"../../firebase.init";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import Loading from '../Shared/Loading';
 
 const Longin = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -34,10 +35,10 @@ const Longin = () => {
         signInError= <p className='text-red-500'><small>{error?.message || gError?.message }</small></p>
     }
     if(loading || gLoading){
-        return <div className="text-center mt-18"> Loading...</div>
+        return <Loading></Loading>
     }
     return (
-        <div className="flex justify-center h-screen items-center my-8">
+        <div className="flex justify-center h-screen items-center my-8 text-accent font-bold">
         <div className="card w-96 bg-base-100 shadow-xl">
             <div className="card-body">
                 <h2 className="text-center text-2xl font-bold">Login</h2>
@@ -95,7 +96,7 @@ const Longin = () => {
                         </label>
                     </div>
                     {signInError}
-                    <input className="btn w-full max-w-xs" type="submit" value="Login" />
+                    <input className="btn w-full max-w-xs btn-accent" type="submit" value="Login" />
                 
                 </form>
                 <p><small>New to Luxury Living <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
