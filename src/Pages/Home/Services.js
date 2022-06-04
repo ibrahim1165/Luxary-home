@@ -3,6 +3,7 @@ import pic1 from '../../Icon/apartment 1.png'
 import pic2 from '../../Icon/affordable 1.png'
 import pic3 from '../../Icon/lessee 1.png'
 import Service from './Service';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
     const services =[
@@ -41,7 +42,7 @@ const Services = () => {
                 }
             </div>
             <div className="text-center my-4">
-                <button className="btn btn-accent">Explor More</button>
+                <Link to="/service" className="btn btn-accent">Explor More</Link>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import cover from "../../Group 33069.png"
 import Loading from './Loading';
@@ -25,7 +25,7 @@ const Nabver = () => {
             
             <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 ">
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/service">Service</Link></li>
               <li><Link to="/admin">Admin</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li>{user ? <button onClick={singout}>LogOut</button> :
@@ -42,7 +42,7 @@ const Nabver = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
           <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us </Link></li>
+              <li><Link to="/service">Service </Link></li>
               <li><Link to="/admin">Admin</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li>{user ? <button onClick={singout} className="font-bold">LogOut</button> :

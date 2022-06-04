@@ -1,0 +1,17 @@
+[
+    {
+        "name":"Office Interior Design",
+        "price":299,
+        "img":"https://i.ibb.co/KwdjG4n/apartment-1.png"
+    },
+    {
+        "name":"Showroom Design",
+       "price":399,
+        "img":"https://i.ibb.co/dkdKcZ7/affordable-1.png"
+    },
+    {
+        "name":"Residential/ Home",
+        "price":499,
+        "img":"https://i.ibb.co/yP49nyV/lessee-1.png"
+    }
+]
