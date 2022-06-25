@@ -8,6 +8,7 @@ import Service from './Pages/Service/Service';
 import Order from './Pages/Service/Order';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Contact from './Pages/Shared/Contact';
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
     <Route path='/order/:id' element={<Order />} />
     <Route path='/service' element={<Service />} />
     <Route path='/signup' element={<Singup />} />
+    <Route path='/contact' element={<Contact />} />
     </Routes>
     <ToastContainer />
     </>
