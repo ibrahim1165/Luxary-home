@@ -15,12 +15,14 @@ const Order = () => {
         const order = {
             email: user.email,
             service: services.name,
+            price: services.price,
             id: id,
             quantity:event.target.quantity?.value,
             address: event.target.address?.value,
             phone: event.target.phone?.value,
         }
-        fetch('http://localhost:5000/order', {
+        fetch('https://tranquil-journey-28375.herokuapp.com/order', {
+
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -38,6 +40,7 @@ const Order = () => {
             event.target.reset();
           
         })
+        navigate('/se')
     }
     return (
         <div>
