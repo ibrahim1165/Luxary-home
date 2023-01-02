@@ -33,7 +33,7 @@ const Projects = () => {
                 <h3>Projects</h3>
                 <p className="text-3xl font-bold ">Discover the latest Interior Design <br />available today</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto px-8 mt-6">
+            <div className="container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mx-auto px-8 mt-6">
                 {
                     projects.map(project=><Project
                     key={project.id}

@@ -21,7 +21,7 @@ const Order = () => {
             address: event.target.address?.value,
             phone: event.target.phone?.value,
         }
-        fetch('https://tranquil-journey-28375.herokuapp.com/order', {
+        fetch('https://lux-home-.up.railway.app/order', {
 
             method: 'POST',
             headers: {
@@ -40,7 +40,7 @@ const Order = () => {
             event.target.reset();
           
         })
-        navigate('/se')
+        navigate('/service')
     }
     return (
         <div>

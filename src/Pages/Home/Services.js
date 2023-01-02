@@ -32,7 +32,7 @@ const Services = () => {
                 <h4>Service</h4>
                 <h1 className="text-3xl font-bold">We re an agency tailored to all<br /> clients needs that always delivers</h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 mx-auto px-8 mt-8">
+            <div className="container lg:grid-cols-3 grid grid-cols-1 md:grid-cols-3 mx-auto px-8 mt-8">
                 {
                     services.map(service=><Service
                     key={service.id}
@@ -41,7 +41,7 @@ const Services = () => {
                     ></Service>)
                 }
             </div>
-            <div className="text-center my-4">
+            <div className="text-center my-8">
                 <Link to="/service" className="btn btn-accent">Explor More</Link>
             </div>
         </div>

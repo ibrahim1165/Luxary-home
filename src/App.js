@@ -10,6 +10,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Contact from './Pages/Shared/Contact';
 import DashBoard from './Pages/DesBoard/DashBoard';
+import Footer from './Pages/Shared/Footer';
 function App() {
   return (
     <>
