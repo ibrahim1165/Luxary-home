@@ -21,7 +21,7 @@ const Order = () => {
             address: event.target.address?.value,
             phone: event.target.phone?.value,
         }
-        fetch('https://lux-home-.up.railway.app/order', {
+        fetch('https://lux-home.onrender.com/order', {
 
             method: 'POST',
             headers: {

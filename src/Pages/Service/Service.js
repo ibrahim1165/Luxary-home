@@ -6,7 +6,7 @@ const Service = () => {
    
     const [services , setService]=useState([])
     useEffect(()=>{
-        fetch("https://lux-home-.up.railway.app/service")
+        fetch("https://lux-home.onrender.com/service")
         .then(res=>res.json())
         .then(data=>setService(data))}   
     ,[])
